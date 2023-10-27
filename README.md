@@ -6,4 +6,4 @@
   1. Checkout this repo into the folder with the `.devcontainer` as the name.
   * `git clone git@github.com:johanmartindev/wp-devcontainer.git .devcontainer`
   1. Check the Wordpress repo into this folder.
-  *
+  * `git@github.com:johanmartindev/wp-nginx-unit-docker-file.git wordpress`
