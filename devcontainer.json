@@ -1,0 +1,52 @@
+{
+	"name": "Wordpress Dev Environment",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"albert.TabOut",
+				"aliariff.auto-add-brackets",
+				"bmewburn.vscode-intelephense-client",
+				"DEVSENSE.composer-php-vscode",
+				"DEVSENSE.phptools-vscode",
+				"DEVSENSE.profiler-php-vscode",
+				"EditorConfig.EditorConfig",
+				"Gruntfuggly.todo-tree",
+				"meganrogge.template-string-converter",
+				"mrmlnc.vscode-duplicate",
+				"mtxr.sqltools-driver-mysql",
+				"oderwat.indent-rainbow",
+				"qcz.text-power-tools",
+				"streetsidesoftware.code-spell-checker",
+				"xdebug.php-debug"
+			],
+			"settings": {
+				"sqltools.connections": [
+					{
+						"name": "Container database",
+						"driver": "MariaDB",
+						"server": "wordpressdb",
+						"previewLimit": 50,
+						"port": 3306,
+						"database": "wordpress",
+						"username": "wordpress",
+						"password": "wordpress"
+					}
+				]
+			},
+		}
+	},
+	"forwardPorts": [
+		8000,
+		8080,
+		3306,
+		9000
+	],
+	"postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
+	"remoteUser": "vscode",
+	"features": {
+		"git": "latest"
+	}
+}

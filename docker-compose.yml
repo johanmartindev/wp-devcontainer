@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: "8"
+        NODE_VERSION: "lts/*"
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    network_mode: service:wordpressdb
+    depends_on:
+      - wordpressdb
+    env_file:
+      - .env
+    environment:
+      - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
+      - WORDPRESS_DB_USER=${WORDPRESS_DB_USER}
+      - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD}
+      - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME}
+      - AUTH_KEY=${AUTH_KEY}
+      - SECURE_AUTH_KEY=${SECURE_AUTH_KEY}
+      - LOGGED_IN_KEY=${LOGGED_IN_KEY}
+      - NONCE_KEY=${NONCE_KEY}
+      - AUTH_SALT=${AUTH_SALT}
+      - SECURE_AUTH_SALT=${SECURE_AUTH_SALT}
+      - LOGGED_IN_SALT=${LOGGED_IN_SALT}
+      - NONCE_SALT=${NONCE_SALT}
+      - MY_KEY=${MY_KEY}
+      - WP_DEBUG=${WP_DEBUG}
+  wordpressdb:
+    image: mariadb
+    restart: unless-stopped
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MARIADB_USER: ${MYSQL_USER}
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD}
+      MARIADB_DATABASE: ${MYSQL_DATABASE}
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+volumes:
+  mariadb-data: null
