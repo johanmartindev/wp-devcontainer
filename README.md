@@ -7,3 +7,5 @@
   * `git clone git@github.com:johanmartindev/wp-devcontainer.git .devcontainer`
   1. Check the Wordpress repo into this folder.
   * `git@github.com:johanmartindev/wp-nginx-unit-docker-file.git wordpress`
+  1. Open vscode. `code .` or via menu in vs code.
+  1. Start vscode devcontainer
