@@ -36,13 +36,13 @@ RUN curl -sSL https://getcomposer.org/installer | php \
 ARG NODE_VERSION="lts/*"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
+# Install AWS CLI
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" \
+&& unzip awscliv2.zip \
+&& sudo ./aws/install
+
 # Store vscode extensions between builds
 ARG USERNAME=vscode
 RUN mkdir -p /home/$USERNAME/.vscode-server/extensions \
     && chown -R $USERNAME \
         /home/$USERNAME/.vscode-server
-
-# Install AWS CLI
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" \
-&& unzip awscliv2.zip \
-&& §sudo ./aws/install
