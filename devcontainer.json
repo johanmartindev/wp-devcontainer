@@ -8,6 +8,7 @@
 			"extensions": [
 				"albert.TabOut",
 				"aliariff.auto-add-brackets",
+				"AmazonWebServices.aws-toolkit-vscode",
 				"bmewburn.vscode-intelephense-client",
 				"DEVSENSE.composer-php-vscode",
 				"DEVSENSE.phptools-vscode",
