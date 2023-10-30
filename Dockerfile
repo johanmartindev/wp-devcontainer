@@ -1,6 +1,5 @@
 ARG VARIANT=8
 ARG USERNAME=vscode
-ARG ARCH="arm64"
 
 FROM mcr.microsoft.com/vscode/devcontainers/php:${VARIANT}
 
@@ -32,7 +31,6 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 RUN curl -sSL https://getcomposer.org/installer | php \
   && chmod +x composer.phar \
   && mv composer.phar /usr/local/bin/composer
-
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 ARG NODE_VERSION="lts/*"

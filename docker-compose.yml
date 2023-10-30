@@ -29,7 +29,7 @@ services:
       - LOGGED_IN_SALT=${LOGGED_IN_SALT}
       - NONCE_SALT=${NONCE_SALT}
       - MY_KEY=${MY_KEY}
-      - WP_DEBUG=${WP_DEBUG}
+      - WP_DEBUG=${WP_DEBUG_CONFIG}
   wordpressdb:
     image: mariadb
     restart: unless-stopped
