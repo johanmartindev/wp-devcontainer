@@ -92,6 +92,10 @@
 	"postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
 	"remoteUser": "vscode",
 	"features": {
-		"git": "latest"
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDeaultShell": "true",
+			"upgradePackages": "true"
+		}
 	}
 }
