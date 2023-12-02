@@ -6,22 +6,18 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"albert.TabOut",
-				"aliariff.auto-add-brackets",
-				"AmazonWebServices.aws-toolkit-vscode",
 				"bmewburn.vscode-intelephense-client",
 				"DEVSENSE.composer-php-vscode",
 				"DEVSENSE.phptools-vscode",
 				"DEVSENSE.profiler-php-vscode",
-				"EditorConfig.EditorConfig",
-				"Gruntfuggly.todo-tree",
-				"meganrogge.template-string-converter",
-				"mrmlnc.vscode-duplicate",
 				"mtxr.sqltools-driver-mysql",
-				"oderwat.indent-rainbow",
-				"qcz.text-power-tools",
-				"streetsidesoftware.code-spell-checker",
-				"xdebug.php-debug"
+				"xdebug.php-debug",
+        "claudiosanches.woocommerce",
+        "esbenp.prettier-vscode",
+        "junstyle.php-cs-fixer",
+        "mtxr.sqltools",
+        "rangav.vscode-thunder-client",
+        "redhat.vscode-xml"
 			],
 			"settings": {
 				"sqltools.connections": [
