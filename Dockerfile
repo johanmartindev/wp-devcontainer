@@ -31,21 +31,21 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
-  && chmod +x wp-cli.phar \
-  && mv wp-cli.phar /usr/local/bin/wp && wp --info
+  && sudo chmod +x wp-cli.phar \
+  && sudo mv wp-cli.phar /usr/local/bin/wp && wp --info
 
 # Install composer
-RUN curl -sSL https://getcomposer.org/installer | php \
-  && chmod +x composer.phar \
-  && mv composer.phar /usr/local/bin/composer
+RUN sudo curl -sSL https://getcomposer.org/installer | php \
+  && sudo chmod +x composer.phar \
+  && sudo mv composer.phar /usr/local/bin/composer
 
 # Install PHIVE
-RUN wget -O phive.phar "https://phar.io/releases/phive.phar" \
-	&& wget -O phive.phar.asc "https://phar.io/releases/phive.phar.asc" \
-	&& gpg --keyserver hkps://keys.openpgp.org --recv-keys 0x6AF725270AB81E04D79442549D8A98B29B2D5D79 \
-	&& gpg --verify phive.phar.asc phive.phar \
-	&& rm phive.phar.asc \
-	&& chmod +x phive.phar \
+RUN sudo wget -O phive.phar "https://phar.io/releases/phive.phar" \
+	&& sudo wget -O phive.phar.asc "https://phar.io/releases/phive.phar.asc" \
+	&& sudo gpg --keyserver hkps://keys.openpgp.org --recv-keys 0x6AF725270AB81E04D79442549D8A98B29B2D5D79 \
+	&& sudo gpg --verify phive.phar.asc phive.phar \
+	&& sudo rm phive.phar.asc \
+	&& sudo chmod +x phive.phar \
 	&& sudo mv phive.phar /usr/local/bin/phive && phive version
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
