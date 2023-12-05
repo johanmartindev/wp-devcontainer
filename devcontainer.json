@@ -31,7 +31,9 @@
 				"mrmlnc.vscode-duplicate",
 				"naumovs.color-highlight",
 				"howardzuo.vscode-git-tags",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"ahmadawais.emoji-log-vscode",
+				"christian-kohler.path-intellisense"
 			],
 			"settings": {
 				"sqltools.connections": [
