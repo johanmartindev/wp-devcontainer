@@ -33,7 +33,8 @@
 				"howardzuo.vscode-git-tags",
 				"EditorConfig.EditorConfig",
 				"ahmadawais.emoji-log-vscode",
-				"christian-kohler.path-intellisense"
+				"christian-kohler.path-intellisense",
+				"stanislav.vscode-twig"
 			],
 			"settings": {
 				"sqltools.connections": [
