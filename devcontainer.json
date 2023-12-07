@@ -34,7 +34,9 @@
 				"EditorConfig.EditorConfig",
 				"ahmadawais.emoji-log-vscode",
 				"christian-kohler.path-intellisense",
-				"stanislav.vscode-twig"
+				"stanislav.vscode-twig",
+				"mblode.twig-language-2",
+				"mblode.twig-language"
 			],
 			"settings": {
 				"sqltools.connections": [
@@ -50,6 +52,12 @@
 					}
 				]
 			},
+      "files.associations": {
+        "*.html": "twig"
+      },
+      "emmet.includeLanguages": {
+        "twig": "html"
+    },
 			"configurations": [
 				{
 					"name": "Listen for Xdebug",
