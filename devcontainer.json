@@ -36,7 +36,9 @@
 				"christian-kohler.path-intellisense",
 				"stanislav.vscode-twig",
 				"mblode.twig-language-2",
-				"mblode.twig-language"
+				"mblode.twig-language",
+				"DavidAnson.vscode-markdownlint",
+				"shd101wyy.markdown-preview-enhanced"
 			],
 			"settings": {
 				"sqltools.connections": [
