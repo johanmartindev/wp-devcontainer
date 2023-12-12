@@ -1,128 +1,160 @@
 {
-	"name": "Wordpress Dev Environment",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspace",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ahmadawais.emoji-log-vscode",
-				"aliariff.auto-add-brackets",
-				"AmazonWebServices.aws-toolkit-vscode",
-				"bmewburn.vscode-intelephense-client",
-				"christian-kohler.path-intellisense",
-				"claudiosanches.woocommerce",
-				"DavidAnson.vscode-markdownlint",
-				"DEVSENSE.composer-php-vscode",
-				"DEVSENSE.phptools-vscode",
-				"DEVSENSE.profiler-php-vscode",
-				"EditorConfig.EditorConfig",
-				"esbenp.prettier-vscode",
-				"GitHub.copilot-chat",
-				"GitHub.copilot-labs",
-				"GitHub.copilot",
-				"github.vscode-github-actions",
-				"GitHub.vscode-pull-request-github",
-				"howardzuo.vscode-git-tags",
-				"junstyle.php-cs-fixer",
-				"mblode.twig-language-2",
-				"mblode.twig-language",
-				"meganrogge.template-string-converter",
-				"mrmlnc.vscode-duplicate",
-				"mtxr.sqltools-driver-mysql",
-				"mtxr.sqltools",
-				"naumovs.color-highlight",
-				"oderwat.indent-rainbow",
-				"qcz.text-power-tools",
-				"rangav.vscode-thunder-client",
-				"redhat.ansible",
-				"redhat.vscode-xml",
-				"SebastianBille.iam-legend",
-				"shd101wyy.markdown-preview-enhanced",
-				"stanislav.vscode-twig",
-				"streetsidesoftware.code-spell-checker",
-				"ThreadHeap.serverless-ide-vscode",
-				"xdebug.php-debug"
-			],
-			"settings": {
-				"sqltools.connections": [
-					{
-						"name": "Container database",
-						"driver": "MariaDB",
-						"server": "wordpressdb",
-						"previewLimit": 50,
-						"port": 3306,
-						"database": "wordpress",
-						"username": "wordpress",
-						"password": "wordpress"
-					}
-				]
-			},
+  "name": "Wordpress Dev Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "aaron-bond.better-comments",
+        "ahmadawais.emoji-log-vscode",
+        "ahmadawais.emoji-log-vscode",
+        "akamud.vscode-caniuse",
+        "albert.TabOut",
+        "aliariff.auto-add-brackets",
+        "aliariff.auto-add-brackets",
+        "AmazonWebServices.aws-toolkit-vscode",
+        "bmewburn.vscode-intelephense-client",
+        "christian-kohler.path-intellisense",
+        "christian-kohler.path-intellisense",
+        "chrmarti.regex",
+        "claudiosanches.woocommerce",
+        "csstools.postcss",
+        "dannyconnell.split-html-attributes",
+        "DavidAnson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint",
+        "DEVSENSE.composer-php-vscode",
+        "DEVSENSE.phptools-vscode",
+        "DEVSENSE.profiler-php-vscode",
+        "donjayamanne.githistory",
+        "ecmel.vscode-html-css",
+        "EditorConfig.EditorConfig",
+        "eriklynd.json-tools",
+        "esbenp.prettier-vscode",
+        "firefox-devtools.vscode-firefox-debug",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "GitHub.copilot-chat",
+        "GitHub.copilot-labs",
+        "GitHub.copilot",
+        "GitHub.remotehub",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "gitpod.gitpod-remote-ssh",
+        "Gruntfuggly.todo-tree",
+        "hbenl.vscode-test-explorer",
+        "howardzuo.vscode-git-tags",
+        "johnpapa.vscode-cloak",
+        "jrebocho.vscode-random",
+        "junstyle.php-cs-fixer",
+        "meganrogge.template-string-converter",
+        "mikestead.dotenv",
+        "mrmlnc.vscode-duplicate",
+        "mtxr.sqltools-driver-mysql",
+        "mtxr.sqltools",
+        "naumovs.color-highlight",
+        "oderwat.indent-rainbow",
+        "okitavera.vscode-nunjucks-formatter",
+        "oliversturm.fix-json",
+        "pnp.polacode",
+        "pranaygp.vscode-css-peek",
+        "qcz.text-power-tools",
+        "rangav.vscode-thunder-client",
+        "redhat.ansible",
+        "redhat.vscode-yaml",
+        "ronnidc.nunjucks",
+        "SebastianBille.iam-legend",
+        "shardulm94.trailing-spaces",
+        "shd101wyy.markdown-preview-enhanced",
+        "stanislav.vscode-twig",
+        "streetsidesoftware.code-spell-checker",
+        "stylelint.vscode-stylelint",
+        "ThreadHeap.serverless-ide-vscode",
+        "vincaslt.highlight-matching-tag",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "xabikos.JavaScriptSnippets",
+        "xdebug.php-debug",
+        "Zignd.html-css-class-completion"
+      ],
+      "settings": {
+        "sqltools.connections": [
+          {
+            "name": "Container database",
+            "driver": "MariaDB",
+            "server": "wordpressdb",
+            "previewLimit": 50,
+            "port": 3306,
+            "database": "wordpress",
+            "username": "wordpress",
+            "password": "wordpress"
+          }
+        ]
+      },
       "files.associations": {
         "*.html": "twig"
       },
       "emmet.includeLanguages": {
         "twig": "html"
     },
-			"configurations": [
-				{
-					"name": "Listen for Xdebug",
-					"type": "php",
-					"request": "launch",
-					"port": 9000
-			},
-			{
-					"name": "Launch currently open script",
-					"type": "php",
-					"request": "launch",
-					"program": "${file}",
-					"cwd": "${fileDirname}",
-					"port": 0,
-					"runtimeArgs": [
-							"-dxdebug.start_with_request=yes"
-					],
-					"env": {
-							"XDEBUG_MODE": "debug,develop",
-							"XDEBUG_CONFIG": "client_port=${port}"
-					}
-			},
-			{
-					"name": "Launch Built-in web server",
-					"type": "php",
-					"request": "launch",
-					"runtimeArgs": [
-							"-dxdebug.mode=debug",
-							"-dxdebug.start_with_request=yes",
-							"-S",
-							"localhost:8000",
-							"-t",
-							"wordpress/"
-					],
-					"program": "",
-					"cwd": "${workspaceRoot}\\wp",
-					"port": 9000,
-					"serverReadyAction": {
-							"pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
-							"uriFormat": "http://localhost:%s",
-							"action": "openExternally"
-					}
-			}
-			]
-		}
-	},
-	"forwardPorts": [
-		8000,
-		8080,
-		3306,
-		9000
-	],
-	"postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
-	"remoteUser": "vscode",
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/common-utils:2": {
-			"configureZshAsDeaultShell": "true",
-			"upgradePackages": "true"
-		}
-	}
+      "configurations": [
+        {
+          "name": "Listen for Xdebug",
+          "type": "php",
+          "request": "launch",
+          "port": 9000
+      },
+      {
+          "name": "Launch currently open script",
+          "type": "php",
+          "request": "launch",
+          "program": "${file}",
+          "cwd": "${fileDirname}",
+          "port": 0,
+          "runtimeArgs": [
+              "-dxdebug.start_with_request=yes"
+          ],
+          "env": {
+              "XDEBUG_MODE": "debug,develop",
+              "XDEBUG_CONFIG": "client_port=${port}"
+          }
+      },
+      {
+          "name": "Launch Built-in web server",
+          "type": "php",
+          "request": "launch",
+          "runtimeArgs": [
+              "-dxdebug.mode=debug",
+              "-dxdebug.start_with_request=yes",
+              "-S",
+              "localhost:8000",
+              "-t",
+              "wordpress/"
+          ],
+          "program": "",
+          "cwd": "${workspaceRoot}\\wp",
+          "port": 9000,
+          "serverReadyAction": {
+              "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
+              "uriFormat": "http://localhost:%s",
+              "action": "openExternally"
+          }
+      }
+      ]
+    }
+  },
+  "forwardPorts": [
+    8000,
+    8080,
+    3306,
+    9000
+  ],
+  "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDeaultShell": "true",
+      "upgradePackages": "true"
+    }
+  }
 }
