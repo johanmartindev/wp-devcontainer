@@ -24,7 +24,7 @@ sudo chmod g+s /usr/local/bin/op
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y mariadb-client \
+    && apt-get install -y mariadb-client graphviz \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php-mysql driver
@@ -50,7 +50,7 @@ RUN sudo wget -O phive.phar "https://phar.io/releases/phive.phar" \
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 ARG NODE_VERSION="lts/*"
-ARG NODE_MODULES="typescript aws-cdk prettier newman"
+ARG NODE_MODULES="typescript aws-cdk prettier cdk-dia prettier aws-cdk @aws-lambda-powertools/tracer @aws-lambda-powertools/metrics @aws-lambda-powertools/logger"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g ${NODE_MODULES}" 2>&1
 
@@ -58,6 +58,13 @@ RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g ${NODE_MO
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" \
 && unzip awscliv2.zip \
 && sudo ./aws/install
+
+
+# Install SAM
+RUN curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-arm64.zip" -o "awssam.zip" \
+&& unzip awssam.zip -d sam-install \
+&& sudo ./sam-install/install \
+&& rm awssam.zip && sam --version
 
 # Store vscode extensions between builds
 ARG USERNAME=vscode
