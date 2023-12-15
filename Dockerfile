@@ -4,6 +4,7 @@ ARG USERNAME=vscode
 FROM mcr.microsoft.com/vscode/devcontainers/php:${VARIANT}
 
 ENV RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev"
+USER ${USERNAME}
 
 # Install Ngrok
 RUN curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | \
@@ -24,7 +25,7 @@ sudo chmod g+s /usr/local/bin/op
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y mariadb-client graphviz vim \
+    && apt-get install -y mariadb-client graphviz vim python3 \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php-mysql driver
@@ -59,15 +60,21 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv
 && unzip awscliv2.zip \
 && sudo ./aws/install
 
-
 # Install SAM
 RUN curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-arm64.zip" -o "awssam.zip" \
 && unzip awssam.zip -d sam-install \
 && sudo ./sam-install/install \
 && rm awssam.zip && sam --version
 
+# Install ansible
+RUN python3 -m pip install --user ansible
+
+# Install pulumi
+RUN curl -fsSL https://get.pulumi.com | sh && \
+  echo "PATH=$PATH:/home/gitpod/.pulumi/bin" >> /home/$USERNAME/.zshrc && \
+  pulumi version
+
 # Store vscode extensions between builds
-ARG USERNAME=vscode
 RUN mkdir -p /home/$USERNAME/.vscode-server/extensions \
     && chown -R $USERNAME \
         /home/$USERNAME/.vscode-server
