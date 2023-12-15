@@ -5,9 +5,9 @@ echo "PATH=$PATH:/home/$USERNAME/.pulumi/bin" >> /home/$USERNAME/.zshrc
 source /home/$USERNAME/.zshrc
 pulumi version
 python3 -m venv /home/vscode/ansible
-/home/vscode/ansible/bin/python /home/vscode/ansible/bin/pip install ansible
-echo "PATH=$PATH:/home/vscode/ansible/bin" >> /home/vscode/.zshrc
-source /home/vscode/.zshrc
+/home/$USERNAME/ansible/bin/python /home/$USERNAME/ansible/bin/pip install ansible
+echo "PATH=$PATH:/home/$USERNAME/ansible/bin" >> /home/$USERNAME/.zshrc
+source /home/$USERNAME/.zshrc
 ansible --version
 git config --global --add safe.directory /workspace
 git config --global user.name "Johan Martin"
