@@ -139,14 +139,7 @@
       ]
     }
   },
-  "forwardPorts": [
-    8000,
-    8080,
-    3306,
-    9000
-  ],
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
-  "remoteUser": "vscode",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
