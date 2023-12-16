@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -xe
 git config --global --add safe.directory /workspace
 git config --global user.name "Johan Martin"
