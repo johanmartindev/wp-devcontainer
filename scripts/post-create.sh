@@ -1,13 +1,9 @@
 #!/bin/bash
 set -xe
-curl -fsSL https://get.pulumi.com | sh
-echo "PATH=$PATH:/home/$USERNAME/.pulumi/bin" >> /home/$USERNAME/.zshrc
-source /home/$USERNAME/.zshrc
-pulumi version
-python3 -m venv /home/vscode/ansible
-/home/$USERNAME/ansible/bin/python /home/$USERNAME/ansible/bin/pip install ansible
+python3 -m venv /home/$USERNAME/ansible
 echo "PATH=$PATH:/home/$USERNAME/ansible/bin" >> /home/$USERNAME/.zshrc
 source /home/$USERNAME/.zshrc
+/home/$USERNAME/ansible/bin/python /home/$USERNAME/ansible/bin/pip install ansible
 ansible --version
 git config --global --add safe.directory /workspace
 git config --global user.name "Johan Martin"
