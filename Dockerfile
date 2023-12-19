@@ -24,7 +24,7 @@ RUN ARCH="arm64" && \
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-  && apt-get install -y mariadb-client graphviz vim python3-full pipx \
+  && apt-get install -y mariadb-client graphviz vim python3-full pipx httpie fzf thefuck \
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php-mysql driver
@@ -50,7 +50,7 @@ RUN sudo wget -O phive.phar "https://phar.io/releases/phive.phar" \
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 ARG NODE_VERSION="lts/*"
-ARG NODE_MODULES="typescript aws-cdk prettier cdk-dia prettier aws-cdk @aws-lambda-powertools/tracer @aws-lambda-powertools/metrics @aws-lambda-powertools/logger"
+ARG NODE_MODULES="typescript aws-cdk prettier cdk-dia prettier aws-cdk @aws-lambda-powertools/tracer @aws-lambda-powertools/metrics @aws-lambda-powertools/logger joplin"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g ${NODE_MODULES}" 2>&1
 

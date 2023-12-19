@@ -71,7 +71,8 @@
         "VisualStudioExptTeam.vscodeintellicode",
         "xabikos.JavaScriptSnippets",
         "xdebug.php-debug",
-        "Zignd.html-css-class-completion"
+        "Zignd.html-css-class-completion",
+        "waderyan.gitblame"
       ],
       "settings": {
         "sqltools.connections": [
