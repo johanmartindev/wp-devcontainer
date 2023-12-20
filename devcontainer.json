@@ -6,14 +6,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-<<<<<<< HEAD
-        "ahmadawais.emoji-log-vscode",
-        "aliariff.auto-add-brackets",
-        "bmewburn.vscode-intelephense-client",
-        "christian-kohler.path-intellisense",
-        "claudiosanches.woocommerce",
-        "DavidAnson.vscode-markdownlint",
-=======
         "aaron-bond.better-comments",
         "ahmadawais.emoji-log-vscode",
         "akamud.vscode-caniuse",
@@ -28,39 +20,22 @@
         "dannyconnell.split-html-attributes",
         "DavidAnson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
->>>>>>> 6b94fdd8264c24c7cc72c11f0e1f56dc0080b3b2
         "DEVSENSE.composer-php-vscode",
         "DEVSENSE.phptools-vscode",
         "DEVSENSE.profiler-php-vscode",
         "donjayamanne.githistory",
-<<<<<<< HEAD
-        "EditorConfig.EditorConfig",
-        "esbenp.prettier-vscode",
-        "foxundermoon.shell-format",
-        "GitHub.copilot-chat",
-        "GitHub.copilot",
-        "github.vscode-github-actions",
-        "GitHub.vscode-pull-request-github",
-        "howardzuo.vscode-git-tags",
-        "junstyle.php-cs-fixer",
-        "mblode.twig-language-2",
-        "meganrogge.template-string-converter",
-=======
         "ecmel.vscode-html-css",
         "EditorConfig.EditorConfig",
         "eriklynd.json-tools",
         "esbenp.prettier-vscode",
-        "firefox-devtools.vscode-firefox-debug",
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
         "GitHub.copilot-chat",
-        "GitHub.copilot-labs",
         "GitHub.copilot",
         "GitHub.remotehub",
         "github.vscode-github-actions",
         "GitHub.vscode-pull-request-github",
         "gitpod.gitpod-remote-ssh",
-        "Gruntfuggly.todo-tree",
         "hbenl.vscode-test-explorer",
         "howardzuo.vscode-git-tags",
         "johnpapa.vscode-cloak",
@@ -68,29 +43,17 @@
         "junstyle.php-cs-fixer",
         "meganrogge.template-string-converter",
         "mikestead.dotenv",
->>>>>>> 6b94fdd8264c24c7cc72c11f0e1f56dc0080b3b2
         "mrmlnc.vscode-duplicate",
         "mtxr.sqltools-driver-mysql",
         "mtxr.sqltools",
         "naumovs.color-highlight",
         "oderwat.indent-rainbow",
-<<<<<<< HEAD
-        "qcz.text-power-tools",
-        "rangav.vscode-thunder-client",
-        "redhat.vscode-xml",
-        "shd101wyy.markdown-preview-enhanced",
-        "stanislav.vscode-twig",
-        "streetsidesoftware.code-spell-checker",
-        "waderyan.gitblame",
-        "xdebug.php-debug"
-=======
         "okitavera.vscode-nunjucks-formatter",
         "oliversturm.fix-json",
         "pnp.polacode",
         "pranaygp.vscode-css-peek",
         "qcz.text-power-tools",
         "rangav.vscode-thunder-client",
-        "redhat.ansible",
         "redhat.vscode-yaml",
         "ronnidc.nunjucks",
         "SebastianBille.iam-legend",
@@ -106,7 +69,6 @@
         "xdebug.php-debug",
         "Zignd.html-css-class-completion",
         "waderyan.gitblame"
->>>>>>> 6b94fdd8264c24c7cc72c11f0e1f56dc0080b3b2
       ],
       "settings": {
         "sqltools.connections": [
