@@ -137,10 +137,6 @@
     }
   },
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
-<<<<<<< HEAD
-  "remoteUser": "vscode",
-=======
->>>>>>> 6b94fdd8264c24c7cc72c11f0e1f56dc0080b3b2
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
