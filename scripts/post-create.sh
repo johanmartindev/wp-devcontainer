@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 set -xe
+git config --global pull.rebase true
 git config --global --add safe.directory /workspace
 git config --global user.name "Johan Martin"
 git config --global user.email "jnm+johanmartindev@catenare.com"
