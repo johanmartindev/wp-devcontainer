@@ -23,8 +23,8 @@ RUN ARCH="arm64" && \
   sudo chmod g+s /usr/local/bin/op
 
 # Install MariaDB client
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-  && apt-get install -y mariadb-client graphviz vim python3-full pipx httpie fzf thefuck \
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive\
+  && apt-get install -y mariadb-client graphviz vim python3-full pipx httpie fzf thefuck\
   && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php-mysql driver
