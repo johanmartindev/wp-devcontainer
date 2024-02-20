@@ -143,5 +143,6 @@
       "configureZshAsDeaultShell": "true",
       "upgradePackages": "true"
     }
-  }
+  },
+  "forwardPorts": [8000]
 }
